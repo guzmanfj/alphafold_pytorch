@@ -161,7 +161,7 @@ def feature_generation(seq_file, out_file):
             aln, aln_id = read_aln(fas_file)
             aln = aln[:, aln[0] != '-']
             write_aln(aln, aln_id, aln_file)
-            exit()
+            continue
 
         if mat_file.exists():
             mat = sio.loadmat(mat_file)
